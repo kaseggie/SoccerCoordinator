@@ -5,6 +5,7 @@
 
 // Manual data input into a dictionary for each player
 
+
 let player1: [String:Any] = ["playerName": "Joe Smith",
                              "heightInInches": 42,
                              "hasPlayedBefore": true,
@@ -105,11 +106,13 @@ var teamDragons: [[String:Any]] = []
 var teamRaptors: [[String:Any]] = []
 
 // Function that sorts the player array by height
+
 heightSortedTeamAll = teamAll.sort() {
     ($0 ["heightInInches"] as? Int) < ($1 ["heightInInches"] as? Int)
 }
 
 // Function to assign players to teams, based on experience. Two separate for loops have been used with differing case appendings. This combined with the sorted array 'averages' players on height too.
+
 func assignHasPlayedBefore () {
     var counter1 = 1
     var counter2 = 1
@@ -144,6 +147,7 @@ func assignHasPlayedBefore () {
 }
 
 // Function used to calculate average height. It has one Integer parameter that is used to represent the team, as passing in an array was too difficult. An enum could have been used to help with this, but was out of scope of the project.
+
 func calcAverageHeight(arrayReference: Int) -> (Double) {
     var totalHeight: Int = 0
     var arrayCount: Int = 0
@@ -185,8 +189,8 @@ teamRaptors
 // Print out letter to guardians
 
 for player in teamSharks {
-    var teamName = "Sharks"
-    var practiceDetails = "March 17, 3pm"
+    let teamName = "Sharks"
+    let practiceDetails = "March 17, 3pm"
     print("Hi \(player["guardianNames"])\n")
     print("In order to have soccer teams that can compete against each other, we have decided to allocate children to a team based on their experience. Each team will have a similar number of both experienced and inexperienced soccer players.\n")
     print("\(player["playerName"]) has been selected to play on the \(teamName) team. The \(teamName) will have their first practice on \(practiceDetails).\n")
@@ -194,8 +198,8 @@ for player in teamSharks {
 }
 
 for player in teamDragons {
-    var teamName = "Dragons"
-    var practiceDetails = "March 17, 1pm"
+    let teamName = "Dragons"
+    let practiceDetails = "March 17, 1pm"
     print("Hi \(player["guardianNames"])\n")
     print("In order to have soccer teams that can compete against each other, we have decided to allocate children to a team based on their experience. Each team will have a similar number of both experienced and inexperienced soccer players.\n")
     print("\(player["playerName"]) has been selected to play on the \(teamName) team. The \(teamName) will have their first practice on \(practiceDetails).\n")
@@ -204,8 +208,8 @@ for player in teamDragons {
 
 
 for player in teamRaptors {
-    var teamName = "Raptors"
-    var practiceDetails = "March 18, 1pm"
+    let teamName = "Raptors"
+    let practiceDetails = "March 18, 1pm"
     print("Hi \(player["guardianNames"])\n")
     print("In order to have soccer teams that can compete against each other, we have decided to allocate children to a team based on their experience. Each team will have a similar number of both experienced and inexperienced soccer players.\n")
     print("\(player["playerName"]) has been selected to play on the \(teamName) team. The \(teamName) will have their first practice on \(practiceDetails).\n")
