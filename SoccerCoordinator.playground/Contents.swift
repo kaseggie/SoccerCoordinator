@@ -117,7 +117,7 @@ func assignHasPlayedBefore () {
     var counter1 = 1
     var counter2 = 1
     for player in heightSortedTeamAll {
-        if (player["hasPlayedBefore"] as? Bool) == true {
+        if (player["hasPlayedBefore"] as! Bool) == true {
             switch (counter1 % 6) {
                 case 1: teamSharks.append(player)
                 case 2: teamDragons.append(player)
@@ -131,7 +131,7 @@ func assignHasPlayedBefore () {
         }
     }
     for player in heightSortedTeamAll {
-        if (player["hasPlayedBefore"] as? Bool) == false {
+        if (player["hasPlayedBefore"] as! Bool) == false {
             switch (counter2 % 6) {
                 case 1: teamRaptors.append(player)
                 case 2: teamDragons.append(player)
@@ -191,18 +191,18 @@ teamRaptors
 for player in teamSharks {
     let teamName = "Sharks"
     let practiceDetails = "March 17, 3pm"
-    print("Hi \(player["guardianNames"])\n")
+    print("Hi \(player["guardianNames"]!)\n")
     print("In order to have soccer teams that can compete against each other, we have decided to allocate children to a team based on their experience. Each team will have a similar number of both experienced and inexperienced soccer players.\n")
-    print("\(player["playerName"]) has been selected to play on the \(teamName) team. The \(teamName) will have their first practice on \(practiceDetails).\n")
+    print("\(player["playerName"]!) has been selected to play on the \(teamName) team. The \(teamName) will have their first practice on \(practiceDetails).\n")
     print("Regards, \n\n Kavan Seggie \nLeague Coordinator")
 }
 
 for player in teamDragons {
     let teamName = "Dragons"
     let practiceDetails = "March 17, 1pm"
-    print("Hi \(player["guardianNames"])\n")
+    print("Hi \(player["guardianNames"]!)\n")
     print("In order to have soccer teams that can compete against each other, we have decided to allocate children to a team based on their experience. Each team will have a similar number of both experienced and inexperienced soccer players.\n")
-    print("\(player["playerName"]) has been selected to play on the \(teamName) team. The \(teamName) will have their first practice on \(practiceDetails).\n")
+    print("\(player["playerName"]!) has been selected to play on the \(teamName) team. The \(teamName) will have their first practice on \(practiceDetails).\n")
     print("Regards, \n\n Kavan Seggie \nLeague Coordinator")
 }
 
@@ -210,9 +210,9 @@ for player in teamDragons {
 for player in teamRaptors {
     let teamName = "Raptors"
     let practiceDetails = "March 18, 1pm"
-    print("Hi \(player["guardianNames"])\n")
+    print("Hi \(player["guardianNames"]!)\n")
     print("In order to have soccer teams that can compete against each other, we have decided to allocate children to a team based on their experience. Each team will have a similar number of both experienced and inexperienced soccer players.\n")
-    print("\(player["playerName"]) has been selected to play on the \(teamName) team. The \(teamName) will have their first practice on \(practiceDetails).\n")
+    print("\(player["playerName"]!) has been selected to play on the \(teamName) team. The \(teamName) will have their first practice on \(practiceDetails).\n")
     print("Regards, \n\n Kavan Seggie \nLeague Coordinator")
 }
 
